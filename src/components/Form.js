@@ -11,7 +11,6 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
-
 import withStyles from "@material-ui/core/styles/withStyles";
 import styles from "../styles/FormStyles";
 
@@ -40,14 +39,13 @@ class Form extends Component {
               <Input id="password" name="password" autoFocus />
             </FormControl>
             <FormControlLabel
-              control={<Checkbox color="primary" />}
+              control={<Checkbox color="default" />}
               label="Remember Me"
             />
             <Button
               variant="contained"
               type="submit"
               fullWidth
-              color="primary"
               className={classes.submit}
             >
               Sign In

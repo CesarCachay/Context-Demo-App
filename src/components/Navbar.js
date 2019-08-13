@@ -17,7 +17,7 @@ class Navbar extends Component {
 
     return (
       <div>
-        <AppBar>
+        <AppBar className={classes.bar}>
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit">
               <span role="img" aria-label="peru">
