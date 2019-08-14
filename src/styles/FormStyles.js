@@ -28,7 +28,10 @@ const styles = theme => ({
   submit: {
     marginTop: theme.spacing(3),
     backgroundColor: "#212121",
-    color: "white"
+    color: "white",
+    "&:hover": {
+      color: "black"
+    }
   }
 });
 export default styles;

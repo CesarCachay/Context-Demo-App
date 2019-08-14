@@ -1,11 +1,14 @@
 import { fade } from "@material-ui/core/styles/colorManipulator";
 const styles = theme => ({
-  bar: {
-    backgroundColor: "black"
-  },
   root: {
     width: "100%",
     marginBottom: 0
+  },
+  barTrue: {
+    backgroundColor: "black"
+  },
+  barFalse: {
+    backgroundColor: "white"
   },
   grow: {
     flexGrow: 1

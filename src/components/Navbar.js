@@ -11,13 +11,18 @@ import SearchIcon from "@material-ui/icons/Search";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "../styles/NavBarStyles";
 
+import { ThemeContext } from "../contexts/ThemeContext";
+
 class Navbar extends Component {
+  static contextType = ThemeContext;
+
   render() {
     const { classes } = this.props;
-
+    console.log(this.context);
+    const { isDarkMode, handleTheme } = this.context;
     return (
-      <div>
-        <AppBar className={classes.bar}>
+      <div className={classes.root}>
+        <AppBar className={isDarkMode ? classes.barTrue : classes.barFalse}>
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit">
               <span role="img" aria-label="peru">
@@ -27,7 +32,7 @@ class Navbar extends Component {
             <Typography className={classes.title} variant="h6" color="inherit">
               App Title
             </Typography>
-            <Switch />
+            <Switch onChange={handleTheme} />
             <div className={classes.grow} />
             <div className={classes.search}>
               <div className={classes.searchIcon}>
